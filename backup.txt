@@ -1,0 +1,797 @@
+/*
+let movies = [
+
+  {
+  id:111161,
+  title:"The Shawshank Redemption",
+  grade:"15",
+  year:1994,
+  rating:9.3,
+  genres:["Drama"] ,
+  summary:"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_shawshank_redemption_1994/medium-cover.jpg"
+
+  },
+  {
+  id:68646,
+  title:"Daeboo",
+  grade:"18",
+  year:1972,
+  rating:9.2,
+  genres:["Crime", "Drama"],
+  summary:"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_godfather_1972/medium-cover.jpg"
+
+  },
+  {
+  id:71562,
+  title:"The Godfather: Part II",
+  grade:"18",
+  year:1974,
+  rating:9.0,
+  genres:["Crime","Drama"],
+  summary:"The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+  nudity:2,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_godfather_part_ii_1974/medium-cover.jpg"
+  
+},
+  {
+  id:468569,
+  title:"The Dark Knight",
+  grade:"15",
+  year:2008,
+  rating:9.0,
+  genres:["Action","Crime"],
+  summary:"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+  nudity:0,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_dark_knight_2008/medium-cover.jpg"
+
+  },
+  {
+  id:50083,
+  title:"12 Angry Men",
+  grade:"15",
+  year:1957,
+  rating:9.0,
+  genres:["Cinema","Drama"],
+  summary:"A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",
+  nudity:0,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/12_angry_men_1957/medium-cover.jpg"
+
+  },
+  {
+  id:108052,
+  title:"Schindler's List",
+  grade:"15",
+  year:1993,
+  rating:8.9,
+  genres:["Drama","History"],
+  summary:"In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/schindlers_list_1993/medium-cover.jpg"
+
+  },
+  {
+  id:167260,
+  title:"The Lord of the Rings: The Return of the King",
+  grade:"12",
+  year:2003,
+  rating:8.9,
+  genres:["Action","Adventure"],
+  summary:"Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_lord_of_the_rings_the_return_of_the_king_2003/medium-cover.jpg"
+
+  },
+  {
+  id:110912,
+  title:"Pulp Fiction",
+  grade:"18",
+  year:1994,
+  rating:8.9,
+  genres:["Cinema","Drama"],
+  summary:"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/pulp_fiction_1994/medium-cover.jpg"
+
+  },
+  {
+  id:60196,
+  title:"Il buono, il brutto, il cattivo",
+  grade:"12",
+  year:1966,
+  rating:8.8,
+  genres:["Western"],
+  summary:"A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_good_the_bad_and_the_ugly_1966/medium-cover.jpg"
+  },
+  {
+  id:120737,
+  title:"The Lord of the Rings: The Fellowship of the Ring",
+  grade:"12",
+  year:2001,
+  rating:8.8,
+  genres:["Action","Adventure"],
+  summary:"A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_lord_of_the_rings_the_fellowship_of_the_ring_2001/medium-cover.jpg"
+
+  },
+  {
+  id:137523,
+  title:"Fight Club",
+  grade:"18",
+  year:1999,
+  rating:8.8,
+  genres:["Drama"],
+  summary:"An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/fight_club_1999/medium-cover.jpg"
+
+  },
+  {
+  id:109830,
+  title:"Forrest Gump",
+  grade:"12",
+  year:1994,
+  rating:8.8,
+  genres:["Drama","Romance"],
+  summary:"The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/forrest_gump_1994/medium-cover.jpg"
+
+  },
+  {
+  id:1375666,
+  title:"Inception",
+  grade:"12",
+  year:2010,
+  rating:8.8,
+  genres:["Action","Adventure"],
+  summary:"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+  nudity:2,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/inception_2010/medium-cover.jpg"
+
+  },
+  {
+  id:167261,
+  title:"The Lord of the Rings: The Two Towers",
+  grade:"12",
+  year:2002,
+  rating:8.7,
+  genres:["Action","Adventure"],
+  summary:"While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+  nudity:2,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_lord_of_the_rings_the_two_towers_2002/medium-cover.jpg"
+
+  },
+  {
+  id:80684,
+  title:"Star Wars: Episode V - The Empire Strikes Back",
+  grade:"All",
+  year:1980,
+  rating:8.7,
+  genres:["Action","Adventure"],
+  summary:"After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader and a bounty hunter named Boba Fett all over the galaxy.",
+  nudity:1,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/star_wars_episode_v_the_empire_strikes_back_1980/medium-cover.jpg"
+
+  },
+  {
+  id:133093,
+  title:"The Matrix (1999)",
+  grade:"12",
+  year:1999,
+  rating:8.7,
+  genres:["Action","Sci-Fi"],
+  summary:"When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+  nudity:2,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_matrix_1999/medium-cover.jpg"
+
+  },
+  {
+  id:99685,
+  title:"Goodfellas",
+  grade:"18",
+  year:1990,
+  rating:8.7,
+  genres:["Cinema","Drama"],
+  summary:"The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/goodfellas_1990/medium-cover.jpg"
+
+  },
+  {
+  id:73486,
+  title:"One Flew Over the Cuckoo's Nest ",
+  grade:"18",
+  year:1975,
+  rating:8.7,
+  genres:["Drama"],
+  summary:"A criminal pleads insanity and is admitted to a mental institution, where he rebels against the oppressive nurse and rallies up the scared patients.",
+  nudity:3,
+  violence:2,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/one_flew_over_the_cuckoos_nest_1975/medium-cover.jpg"
+
+  },
+  {
+  id:47478,
+  title:"Shichinin no samurai",
+  grade:"15",
+  year:1954,
+  rating:8.6,
+  genres:["Action","Adventure"],
+  summary:"A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/seven_samurai_1954/medium-cover.jpg"
+  },
+  {
+  id:114369,
+  title:"Se7en",
+  grade:"18",
+  year:1995,
+  rating:8.6,
+  genres:["Cinema","Drama"],
+  summary:"Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/se7en_1995/medium-cover.jpg"
+  },
+  {
+  id:118799,
+  title:"La vita è bella",
+  grade:"All",
+  year:1997,
+  rating:8.6,
+  genres:["Comedy","Drama"],
+  summary:"When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son from the dangers around their camp.",
+  nudity:0,
+  violence:0,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/life_is_beautiful_1997/medium-cover.jpg"
+  },
+  {
+  id:317248,
+  title:"Cidade de Deus",
+  grade:"18",
+  year:2002,
+  rating:8.6,
+  genres:["Crime","Drama"],
+  summary:"In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/city_of_god_2002/medium-cover.jpg"
+
+  },
+  {
+  id:102926,
+  title:"The Silence of the Lambs",
+  grade:"15",
+  year:1991,
+  rating:8.6,
+  genres:["Cinema","Drama"],
+  summary:"A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_silence_of_the_lambs_1991/medium-cover.jpg"
+
+  },
+  {
+  id:38650,
+  title:"It's a Wonderful Life",
+  grade:"12",
+  year:1946,
+  rating:8.6,
+  genres:["Drama","Family"],
+  summary:"An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.",
+  nudity:2,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/its_a_wonderful_life_1946/medium-cover.jpg"
+
+  },
+  {
+  id:76759,
+  title:"Star Wars",
+  grade:"All",
+  year:1977,
+  rating:8.6,
+  genres:["Action","Fantasy"],
+  summary:"Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+  nudity:1,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/star_wars_1977/medium-cover.jpg"
+
+  },
+  {
+  id:120815,
+  title:"Saving Private Ryan",
+  grade:"15",
+  year:1998,
+  rating:8.6,
+  genres:["Drama","War"],
+  summary:"Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/saving_private_ryan_1998/medium-cover.jpg"
+
+  },
+  {
+  id:245429,
+  title:"Sen to Chihiro no kamikakushi",
+  grade:"All",
+  year:2001,
+  rating:8.6,
+  genres:["Animation","Adventure"],
+  summary:"During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+  nudity:2,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/spirited_away_2001/medium-cover.jpg"
+
+  },
+  {
+  id:120689,
+  title:"The Green Mile",
+  grade:"18",
+  year:1999,
+  rating:8.6,
+  genres:["Crime","Drama"],
+  summary:"The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+  nudity:2,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_green_mile_1999/medium-cover.jpg"
+
+  },
+  {
+  id:816692 ,
+  title:"Interstellar",
+  grade:"12",
+  year:2014,
+  rating:8.6,
+  genres:["Adventure","Drama"],
+  summary:"A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+  nudity:0,
+  violence:0,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/interstellar_2014/medium-cover.jpg"
+
+  },
+  
+  {
+  id:6751668,
+  title:"Gisaengchung",
+  grade:"15",
+  year:2019,
+  rating:8.6,
+  genres:["Comedy", "Drama", "Thriller"],
+  summary:"Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/parasite_2019/medium-cover.jpg"
+  },
+  
+  
+  {
+  id:110413,
+  title:"Léon",
+  grade:"18",
+  year:1994,
+  rating:8.5,
+  genres:["Action", "Cinema"],
+  summary:"Mathilda, a 12-year-old girl, is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",
+  nudity:0,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/leon_the_professional_1994/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:114814,
+  title:"The Usual Suspects",
+  grade:"18",
+  year:1995,
+  rating:8.5,
+  genres:["Cinema", "Thriller"],
+  summary:"A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
+  nudity:2,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_usual_suspects_1995/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:56058,
+  title:"Seppuku",
+  grade:"15",
+  year:1962,
+  rating:8.6,
+  genres:["Action", "Drama"],
+  summary:"When a ronin requesting seppuku at a feudal lord's palace is told of the brutal suicide of another ronin who previously visited, he reveals how their pasts are intertwined - and in doing so challenges the clan's integrity.",
+  nudity:0,
+  violence:2,
+  profanity:"No warning",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/harakiri_1962/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:110357,
+  title:"The Lion King ",
+  grade:"All",
+  year:1994,
+  rating:8.5,
+  genres:["Animation", "Adventure"],
+  summary:"Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+  nudity:0,
+  violence:1,
+  profanity:"WARNING",
+  alcohol_smoking:"No warning"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_lion_king_1994/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:253474,
+  title:"The Pianist",
+  grade:"12",
+  year:2002,
+  rating:8.5,
+  genres:["Biography", "Drama"],
+  summary:"A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.",
+  nudity:2,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_pianist_2002/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:88763,
+  title:"Back to the Future",
+  grade:"12",
+  year:1985,
+  rating:8.5,
+  genres:["Adventure", "Comedy"],
+  summary:"Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.",
+  nudity:0,
+  violence:2,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/back_to_the_future_1985/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:103064,
+  title:"Terminator 2: Judgment Day",
+  grade:"15",
+  year:1991,
+  rating:8.5,
+  genres:["Action", "Sci-Fi"],
+  summary:"A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/terminator_2_judgment_day_1991/medium-cover.jpg"
+
+  
+  },
+  
+  
+  {
+  id:120586,
+  title:"American History X",
+  grade:"18",
+  year:1998,
+  rating:8.5,
+  genres:["Drama"],
+  summary:"A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/american_history_x_1998/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:27977,
+  title:"Modern Times",
+  grade:"All",
+  year:1936,
+  rating:8.5,
+  genres:["Comedy", "Drama"],
+  summary:"The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",
+  nudity:0,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/modern_times_1936/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:54215,
+  title:"Psycho",
+  grade:"18",
+  year:1960,
+  rating:8.5,
+  genres:["Horror", "Mystery"],
+  summary:"A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/psycho_1960/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:172495,
+  title:"Gladiator",
+  grade:"15",
+  year:2000,
+  rating:8.5,
+  genres:["Action", "Adventure"],
+  summary:"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/gladiator_2000/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:21749,
+  title:"City Lights",
+  grade:"All",
+  year:1931,
+  rating:8.5,
+  genres:["Comedy", "Drama"],
+  summary:"With the aid of a wealthy erratic tippler, a dewy-eyed tramp who has fallen in love with a sightless flower girl accumulates money to be able to help her medically.",
+  nudity:0,
+  violence:1,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/city_lights_1931/medium-cover.jpg"
+
+  },
+  
+  {
+  id:407887,
+  title:"The Departed",
+  grade:"15",
+  year:2006,
+  rating:8.5,
+  genres:["Cinema", "Drama"],
+  summary:"An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_departed_2006/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:1675434,
+  title:"The Intouchables ",
+  grade:"12",
+  year:2011,
+  rating:8.5,
+  genres:["Biography", "Comedy"],
+  summary:"After he becomes a quadriplegic from a paragliding accident, an aristocrat hires a young man from the projects to be his caregiver.",
+  nudity:3,
+  violence:0,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_intouchables_2011/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:2582802,
+  title:"Whiplash",
+  grade:"15",
+  year:2014,
+  rating:8.5,
+  genres:["Drama", "Music"],
+  summary:"A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+  nudity:0,
+  violence:1,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/whiplash_2014/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:482571,
+  title:"The Prestige",
+  grade:"15",
+  year:2006,
+  rating:8.5,
+  genres:["Drama", "Mystery"],
+  summary:"After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/the_prestige_2006/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:95327,
+  title:"Hotaru no haka",
+  grade:"All",
+  year:1988,
+  rating:8.5,
+  genres:["Animation", "Drama"],
+  summary:"A young boy and his little sister struggle to survive in Japan during World War II.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/grave_of_the_fireflies_1988/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:64116,
+  title:"Once Upon a Time in the West",
+  grade:"15",
+  year:1968,
+  rating:8.5,
+  genres:["Western"],
+  summary:"A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.",
+  nudity:3,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/once_upon_a_time_in_the_west_1968/medium-cover.jpg"
+
+  },
+  
+  
+  {
+  id:8503618,
+  title:"Hamilton",
+  grade:"13",
+  year:2020,
+  rating:8.6,
+  genres:["Biography","Drama"],
+  summary:"The real life of one of America's foremost founding fathers and first Secretary of the Treasury, Alexander Hamilton. Captured live on Broadway from the Richard Rodgers Theater with the original Broadway cast.",
+  nudity:1,
+  violence:3,
+  profanity:"WARNING",
+  alcohol_smoking:"Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/hamilton_2020/medium-cover.jpg"
+
+  },
+  
+  {
+  id:34583,
+  title:"Casablanca",
+  grade:"12",
+  year:1942,
+  rating:8.5,
+  genres:["Drama","Romance"],
+  summary:"A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.",
+  nudity:3,
+  violence:3,
+  profanity:"No warning",
+  alcohol_smoking:"Smoking and Drinking"
+  , medium_cover_image: "https://yts.mx/assets/images/movies/casablanca_1942/medium-cover.jpg"
+  }
+  
+  
+  ]
+*/
+

@@ -1,0 +1,22 @@
+type Movie {
+      id: String!
+      title: String!
+      directors: String
+      stars: String 
+      genres: [String]
+      runtime: Int
+      grade: String
+      synopsis: String
+      violence_per: String
+      violence: Int
+      nudity: Int
+      word: Int
+      alcohol: String
+      poster: String
+    }
+    
+    type Query {
+      movies(limit: Int): [Movie]!
+      movie(id: String!): Movie
+      suggestions(id: String!): [Movie]!
+    }
