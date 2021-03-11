@@ -3,7 +3,7 @@ type Movie {
       title: String!
       directors: String
       stars: String 
-      genres: [String]
+      genres: String
       runtime: Int
       grade: String
       synopsis: String
@@ -17,14 +17,14 @@ type Movie {
 
 type Timeline {
       idx: Int!
-      Kiss_scene: Int
-      Clown: Int
-      Gun: Int
+      Kiss_scene: String
+      clown: String
+      gun: String
     }
     
 type Query {
       movies(limit: Int): [Movie]!
       movie(id: String!): Movie
       suggestions(id: String!): [Movie]!
-      timeline(id: String!): [Timeline]
+      timelines(id: String!): [Timeline]
     }

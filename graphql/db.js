@@ -4,13 +4,24 @@ const mysql = require('mysql2/promise');
 
 // create the connection to database
 const connection = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
+  host: 'movie-info.cjwpwdzcf09z.ap-northeast-2.rds.amazonaws.com',
+  user: 'admin',
   database: 'movie_info',
+  port:3306,
   password: 'shootingcorn',
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
+  ssl: 'Amazon RDS',
+    authPlugins: {
+        mysql_clear_password: () => () =>
+            signer.getAuthToken({
+                region: 'ap-northeast-2c',
+                hostname: 'movie-info.cjwpwdzcf09z.ap-northeast-2.rds.amazonaws.com',
+                port: '3306',
+                username: 'admin'
+            })
+    }
 });
 
 export const getMovies = async () => {
@@ -31,11 +42,11 @@ export const getSuggestions = id => {
   return movie;
 };
 
-export const getTimeline = async id => {
-  const [timeline] = await connection.query(
+export const getTimelines = async id => {
+  const [timelines] = await connection.query(
     'SELECT * FROM `' + id + '`'
   );
-  return timeline;
+  return timelines;
 };
 
 export const deleteMovie = id => {
