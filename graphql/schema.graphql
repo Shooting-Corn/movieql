@@ -19,7 +19,7 @@ type Timeline {
       idx: Int!
       Kiss_scene: String
       clown: String
-      gun: String
+      blood: String
     }
     
 type Query {
