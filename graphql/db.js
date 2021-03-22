@@ -26,7 +26,7 @@ const connection = mysql.createPool({
 
 export const getMovies = async () => {
   const [movies] = await connection.query(
-    'SELECT * FROM `Metadata`');
+    'SELECT * FROM `Metadata` ORDER BY id');
   return movies;
 };
 
