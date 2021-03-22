@@ -1,0 +1,29 @@
+type Movie {
+      id: String!
+      title: String!
+      directors: String
+      stars: String 
+      genre: String
+      runtime: Int
+      grade: String
+      synopsis: String
+      violence_per: Float
+      violence: Int
+      nudity: Int
+      word: Int
+      alcohol: String
+      poster: String
+    }
+type Timeline {
+      idx: Int!
+      Kiss_scene: String
+      Gun: String
+      Clown: String
+    }
+    
+type Query {
+      movies(limit: Int): [Movie]!
+      movie(id: String!): Movie
+      suggestions(id: String!): [Movie]!
+      timelines(id: String!): [Timeline]
+    }
